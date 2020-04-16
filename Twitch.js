@@ -104,6 +104,17 @@ const Twitch = () => {
   }
 
   setInterval(async () => {
+//     Using fetch instead of axios
+//     let response = await fetch('https://api.twitch.tv/helix/streams?user_id=108627931', {
+//         headers: {
+//             "Client-Id": "ir7uv13rg3mgwi5jihzvj1ywavl5tm"
+//         }
+//       }).then((res) => res.json())
+//       .then(data => {
+//         return data
+//       })
+//       .catch((err) => console.log(err))
+    
       let response = await axios.get('https://api.twitch.tv/helix/streams?user_id=ENTER_YOUR_CHANNEL_ID', {
       headers: {
           "Client-Id": "ENTER_YOUR_CLIENT_ID"
